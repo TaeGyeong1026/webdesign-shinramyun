@@ -1,0 +1,719 @@
+@charset "UTF-8";
+@media all and (min-width : 768px){
+    
+/*초기화*/
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul, li{
+    list-style: none;
+}
+img{
+    border: 0;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+    
+    
+.pc_ver{display: block;}
+.mobile_ver{display: none;}
+
+/*헤더*/
+header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 98000;
+    background-color: white;
+    border-bottom: 2px solid #e5e5e5;
+}
+.header-in-wrap{
+    width: 1030px;
+    height: 100px;
+    margin: 0 auto;
+}
+.logo-1{
+    width: 130px;
+    height: 100px;
+    float: left;
+}
+.logo-2{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-left: 10px;
+}
+.header-menu{
+    width: 760px;
+    height: 100px;
+    float: right;
+}
+.top{
+    position: relative;
+    float: left;
+    height: 100px;
+    line-height: 100px;
+    margin-right: 25px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.top:last-child{margin: 0;}
+.top-on{font-weight: 900;}
+.top-effect{
+    height: 100px;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    border-bottom: 5px solid #e10416;
+    box-sizing: border-box;
+}
+
+/*SIDE MENU*/
+.side-menu-wrap{
+    position: fixed;
+    top: 350px;
+    left: 50px;
+    z-index: 2;
+    font-size: 20px;
+}
+.side-menu-dot{
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: black;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.side-menu{
+    margin-bottom: 20px;
+    position: relative;
+    opacity: 0.3;
+}
+.side-menu:hover{
+    opacity: 1;
+    font-weight: 900;
+}
+.side-menu-logo{
+    position: absolute;
+    left: -12.5px;
+    top: 6px;
+    opacity: 0;
+}
+.side-on{
+    opacity: 1;
+    font-weight: 900;
+}
+.logo-on{opacity: 1;}
+
+/*TOP move button*/
+.top-but-wrap{
+    width: 58px;
+    height: 58px;
+    border-radius: 29px;
+    position: fixed;
+    right: 70px;
+    bottom: 70px;
+    z-index: 9999;
+    opacity: 0.95;
+    text-align: center;
+    font-weight: 700;
+    display: none;
+}
+#top-but{
+    display: block;
+    border-radius: 29px;
+    box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+/*섹션*/
+section{
+    width: 100%;
+    padding-top: 100px;
+    overflow: hidden;
+}
+article{
+    width: 100%;
+    overflow: hidden;
+}
+
+/*MAIN*/
+.main{
+    width: 100%;
+    height: 869px;
+    position: fixed;
+    z-index: -9;
+}
+.main>img{
+    position: absolute;
+    width: 100%;
+}
+#main-last, #main-after{opacity: 0;}
+.main-effect{
+    width: 100%;
+    height: 0;
+}
+.main-box{
+    width: 100%;
+    height: 869px;
+}
+
+/*제품소개*/
+.intro-wrap{
+    width: 100%;
+    height: 1575px;
+    background-color: white;
+    padding-top: 75px;
+/*    overflow: visible;*/
+}
+.intro-top-wrap{
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.intro-txt{
+    float: left;
+    font-size: 25px;
+}
+.intro-txt>h1{
+    font-size: 70px;
+    line-height: 70px;
+}
+.intro-txt>h2{
+    font-size: 55px;
+    line-height: 55px;
+}
+.intro-top-pic{float: right;}
+.intro-bottom{
+    width: 100%;
+    position: relative;
+    margin-top: 75px;
+    background-size: 1920px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.intro-pic-wrap{
+    width: 1140px;
+    height: 940px;
+    /*position: absolute;*/
+    position: relative;
+    margin: 0 auto;
+    top: 0;
+}
+.intro-pic-position{
+    width: 280px;
+    height: 280px;
+    margin-right: 150px;
+    margin-bottom: 50px;
+    float: left;
+    position: relative;
+    border-radius: 140px;
+    background-color: #dadada;
+}
+.intro-pic{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition-duration: 0.5s;
+    position: absolute;
+    overflow: hidden;
+}
+.intro-pic:hover{
+    width: 400px;
+    height: 400px;
+    transform: translate(-60px,-100px);
+    background-color: white;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.intro-pic-position:nth-child(3),
+.intro-pic-position:nth-child(6),
+.intro-pic-position:nth-child(9){
+    margin: 0;
+}
+.intro-in-txt{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    top: 100%;
+    font-weight: 700;
+}
+
+
+
+/*브랜드 역사*/
+.history-wrap{
+    width: 100%;
+    height: 1250px;
+    padding-top: 50px;
+    background-color: white;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.history-txt{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+.history-txt>h1{
+    font-size: 50px;
+    margin-bottom: 50px;
+    font-weight: 900;
+}
+/*.history-bg{
+    width: 100%;
+    position: absolute;
+    transform: scale(0.9);
+    opacity: 0.5;
+}*/
+.history-in-wrap{
+    width: 583px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 100px;
+}
+.history-year-top,
+.history-year-bottom{
+    width: 100%;
+}
+.history-year{
+    width: 83px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    float: left;
+    font-size: 27px;
+    cursor: pointer;
+}
+.year-top-on{
+    border-top: 5px solid #e10416;
+    margin-top: -5px;
+    font-weight: 700;
+}
+.year-bottom-on{
+    border-bottom: 5px solid #e10416;
+    font-weight: 700;
+}
+.history-contents{
+    position: absolute;
+    top: 170px;
+    left: 41.5px;
+}
+.history-arrow-wrap{
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    left: 185px;
+    top: 630px;
+}
+.history-arrow{
+    width: 45%;
+    height: 100%;
+    float: left;
+    font-size: 27px;
+    font-weight: 900;
+    margin-right: 10%;
+    color: white;
+    cursor: pointer;
+}
+.history-arrow:hover{color: #e10416;}
+#history-next{margin-right: 0;}
+
+
+/*세계속의 신라면*/
+.global-wrap{
+    width: 100%;
+    height: 839px;
+    background-color: white;
+    padding-top: 30px;
+}
+.global-title{
+    width: 100%;
+    text-align: center;
+    font-size: 70px;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+.global-map{
+    width: 1389px;
+    margin: 0 auto;
+    position: relative;
+}
+.global-flag-wrap{
+    width: 1389px;
+    height: 747px;
+    position: absolute;
+    top: 0;
+}
+.global-in-wrap{position: absolute;}
+.global-flag{
+    height: 25px;
+    position: relative;
+    box-sizing: border-box;
+}
+.global-in-txt{
+    background-color: white;
+    font-size: 15px;
+    border: 1px solid black;
+    font-weight: 700;
+    padding: 10px;
+    display: none;
+    margin-top: 5px;
+    position: relative;
+    z-index: 999;
+    left: 0;
+}
+
+/*신라면TV-CF*/
+.cf-wrap{
+    width: 100%;
+    height: 1050px;
+    background-color: white;
+    padding-top: 50px;
+    overflow: hidden;
+    position: relative;
+}
+.cf-logo-wrap{
+    width: 500px;
+    margin: 0 auto;
+}
+.cf-logo-wrap>img{margin-right: 70px;}
+.cf-logo-wrap>img:last-child{margin-right: 0;}
+.cf-title{
+    width: 335px;
+    margin-top: 30px;
+    margin-left: 800px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 40px;
+}
+.cf-title>h1{font-size: 40px;}
+.cf-horizon-wrap{
+    width: 7624px;
+    height: 650px;
+    overflow: hidden;
+    margin-top: 50px;
+    position: relative;
+    left: -350px;
+}
+.cf-item-wrap{
+    float: left;
+    width: 758px;
+    height: 650px;
+    margin-right: 195px;
+}
+.cf-item{
+    width: 758px;
+    height: 480px;
+    opacity: 0.5;
+}
+.cf-item-txt-wrap{
+    width: 100%;
+    padding-top: 20px;
+    display: none;
+}
+.cf-item-title{
+    font-weight: 700;
+}
+.cf-item-title,
+.cf-item-txt{
+    width: 50%;
+    text-align: center;
+    float: left;
+    line-height: 18px;
+}
+.cf-scroll-bar{
+    width: 100%;
+    height: 10px;
+    background-color: #f3f3f3;
+    margin-top: 25px;
+}
+.cf-scroll-but{
+    width: 12.5%;
+    height: 10px;
+    background-color: #e10416;
+    float: left;
+    
+}
+.cf-arrow-wrap{
+    width: 1000px;
+    height: 45px;
+    position: absolute;
+    left: 480px;
+    top: 580px;
+}
+.cf-arr{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+}
+.cf-arr-b{display: none;}
+.cf-arr:hover{background-color: #e10416;}
+.cf-arr:hover>.cf-arr-f{display: none;}
+.cf-arr:hover>.cf-arr-b{display: block;}
+.cf-arr>img{
+    position: absolute;
+    top: 7.5px;
+}
+.cf-arr-left{left: 10px;}
+.cf-arr-right{right: 10px;}
+#cf-left{float: left;}
+#cf-right{float: right;}
+
+/*29초 영화제*/
+.movie-wrap{
+    width: 100%;
+    height: 1750px;
+    background-color: white;
+    position: relative;
+    padding-top: 150px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.movie-txt-wrap{
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+}
+.movie-title{
+    font-size: 130px;
+    line-height: 130px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    position: relative;
+}
+.movie-contents-cliping{
+    width: 1000px;
+    height: 850px;
+    margin: 0 auto;
+    margin-top: 120px;
+    overflow: hidden;
+    padding-top: 10px;
+}
+.movie-contents-wrap{
+    width: 3000px;
+    height: 850px;
+    position: relative;
+    left: 0px;
+}
+.movie-contents{
+    width: 1000px;
+    height: 850px;
+    margin: 0 auto;
+    position: relative;
+    font-size: 20px;
+    float: left;
+}
+.movie-contents-in,
+.movie-contents-in-txt{
+    position: absolute;
+    font-weight: 500;
+    color: #2a2828;
+}
+.movie-contents-in>a{display: block;}
+#m-1-1{top: 30px;left: 140px;}
+#m-1-1>.movie-contents-in-txt{left: 0;top: -30px;}
+#m-1-2{top: 108px;left: 609px;}
+#m-1-2>.movie-contents-in-txt{right: 0;top: -25px;}
+#m-1-3{top: 354px;left: 0px;}
+#m-1-4{top: 354px;left: 259px;}
+#m-1-3>.movie-contents-in-txt,
+#m-1-4>.movie-contents-in-txt{
+    left: 0;
+    bottom: -15px;
+}
+#m-1-5{top: 514px;left: 609px;}
+#m-1-5>.movie-contents-in-txt{right: 0;bottom: -15px;}
+
+#m-2-1{top: 61px;left: 89px; }
+#m-2-1>.movie-contents-in-txt{left: 0;top: -30px;}
+#m-2-2{top: 134px;left: 561px; }
+#m-2-2>.movie-contents-in-txt{right: 0;top: -25px;}
+#m-2-3{top: 417px;left: 7px; }
+#m-2-3>.movie-contents-in-txt{left: 0;bottom: -15px;}
+#m-2-4{top: 417px;left: 450px; }
+#m-2-5{top: 417px;left: 763px; }
+#m-2-4>.movie-contents-in-txt,
+#m-2-5>.movie-contents-in-txt{
+    right: 0;
+    bottom: -15px;
+}
+
+#m-3-1{top: 21px;left: 146px; }
+#m-3-1>.movie-contents-in-txt{left: 0;top: -30px;}
+#m-3-2{top: 113px;left: 587px; }
+#m-3-2>.movie-contents-in-txt{right: 0;top: -30px;}
+#m-3-3{top: 359px;left: 97px; }
+#m-3-3>.movie-contents-in-txt{left: 0;bottom: -15px;}
+#m-3-4{top: 360px;left: 527px; }
+#m-3-4>.movie-contents-in-txt{right: 0;bottom: -15px;}
+
+.movie-arrow-wrap{
+    width: 62.5%;
+    height: 45px;
+    position: absolute;
+    left: 18.75%;
+    top: 1100px;
+}
+.movie-arr{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+}
+.movie-arr-b{display: none;}
+.movie-arr:hover{background-color: #e10416;}
+.movie-arr:hover>.movie-arr-f{display: none;}
+.movie-arr:hover>.movie-arr-b{display: block;}
+.movie-arr>img{
+    position: absolute;
+    top: 7.5px;
+}
+.movie-arr-left{left: 10px;}
+.movie-arr-right{right: 10px;}
+#movie-left{float: left; display: none;}
+#movie-right{float: right;}
+
+
+.movie-scroll{
+    width: 90px;
+    height: 20px;
+    position: absolute;
+    left: 47.21354%;
+    bottom: 300px;
+}
+.movie-scroll-but{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #cccccc;
+    float: left;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.movie-scroll-but:last-child{margin: 0;}
+.movie-scroll-but:hover{background-color: #999999;}
+.movie-but-on{background-color: #666666;}
+
+/*누들푸들 추천 레시피*/
+.recipe-wrap{
+    width: 100%;
+    background-color: white;
+    padding-top: 160px;
+}
+.recipe-title{font-size: 20px;}
+.recipe-title>a{display: block;}
+.recipe-title-txt{
+    font-size: 40px;
+    font-weight: 900;
+}
+.recipe-position-wrap{
+    width: 1140px;
+    margin: 0 auto;
+}
+.recipe-contents-wrap{
+    margin-top: 75px;
+    overflow: hidden;
+}
+.recipe-contents-in{
+    width: 359px;
+    height: 490px;
+    float: left;
+    border: 1px solid #b7b7b7;
+    margin-right: 28px;
+    margin-bottom: 15px;
+}
+.recipe-contents-in:nth-child(3){margin-right: 0;}
+.recipe-contents-in:nth-child(6){margin-right: 0;}
+.recipe-contents-pic{overflow: hidden;}
+.recipe-contents-pic>img{transition-duration: 0.5s;}
+.recipe-contents-pic>img:hover{transform: scale(1.05);}
+.recipe-contents-in>a{display: block;}
+.recipe-contents-txt{
+    text-align: center;
+    margin-top: 35px;
+    font-size: 20px;
+}
+.recipe-but{
+    width: 80px;
+    height: 25px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.recipe-but:hover{
+    color: white;
+    background-color: #e10416;
+    border-radius: 12.5px;
+}
+#recipe-close{display: none;}
+.recipe-page-2{
+    height: 0px;
+    margin-top: 0px;
+}
+
+/*푸터*/
+footer{
+    width: 100%;
+    height: 160px;
+    background-color: white;
+    padding-top: 60px;
+    border-top: 4px solid #e5e5e5;
+}
+.footer-button-wrap{
+    width: 220px;
+    height: 40px;
+    margin-left: 44.2708%;
+    margin-bottom: 30px;
+}
+.footer-button{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    float: left;
+}
+.footer-button:last-child{margin: 0;}
+.footer-logo-txt-wrap{
+    width: 500px;
+    height: 25px;
+    margin-left: 36.9791%;
+}
+.footer-logo-txt-wrap>a{
+    display: block;
+    width: 60px;
+    height: 25px;
+    float: left;
+    margin-right: 10px;
+}
+.footer-logo{
+    width: 60px;
+    height: 25px;
+    float: left;
+}
+.footer-txt{float: left;}
+
+
+/*end*/
+}
